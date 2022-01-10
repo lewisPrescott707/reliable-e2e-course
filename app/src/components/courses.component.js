@@ -1,17 +1,17 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-export default class Users extends Component {
+export default class Courses extends Component {
 
     constructor(props) {
         super(props);
-        this.state = { usersCollection: [] };
+        this.state = { coursesCollection: [] };
     }
 
     componentDidMount() {
-        axios.get('http://localhost:4000/users')
+        axios.get('http://localhost:4000/courses')
             .then(res => {
-                this.setState({ usersCollection: res.data.users });
+                this.setState({ coursesCollection: res.data.courses });
             })
             .catch(function (error) {
                 console.log(error);
@@ -20,18 +20,18 @@ export default class Users extends Component {
 
     render() {
         return (
-            <div className="wrapper-users">
+            <div className="wrapper-courses">
                 <div className="container">
                     <table className="table table-striped table-dark">
                         <thead className="thead-dark">
                             <tr>
                                 <td>ID</td>
                                 <td>Name</td>
-                                <td>Email</td>
+                                <td>Author</td>
                             </tr>
                         </thead>
                         <tbody>
-                            {this.state.usersCollection.map((data, i) => {
+                            {this.state.coursesCollection.map((data, i) => {
                                 return (
                                 <tr key={i}>
                                     <td>
@@ -41,7 +41,7 @@ export default class Users extends Component {
                                         {data.name}
                                     </td>
                                     <td>
-                                        {data.email}
+                                        {data.author}
                                     </td>
                                 </tr>
                             )})}

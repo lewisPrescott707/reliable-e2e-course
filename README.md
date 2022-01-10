@@ -1,6 +1,6 @@
-# tau-api-testing
+# reliable-e2e-course
 
-Training resource to be used alongside "API Testing with Supertest & Nock" on Test Automation University.
+Training resource to be used alongside "Reliable End to End testing using Contract Testing with Cypress & Pactflow" on Thinkific.
 
 ## Run Tests
 

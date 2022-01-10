@@ -2,7 +2,7 @@ let express = require('express');
 let cors = require('cors');
 let bodyParser = require('body-parser');
 
-const userRoute = require('./routes/user.routes')
+const coursesRoute = require('./routes/courses.routes')
 
 const app = express();
 app.use(bodyParser.json());
@@ -10,7 +10,7 @@ app.use(bodyParser.urlencoded({
     extended: true
 }));
 app.use(cors());
-app.use('/users', userRoute)
+app.use('/courses', coursesRoute)
 
 
 const port = process.env.PORT || 4000;

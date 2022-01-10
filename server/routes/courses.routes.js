@@ -6,7 +6,7 @@ router.route('/create').post((req, res) => {
 });
 
 router.route('/').get((req, res) => {
-    return res.json({ "users" : [{_id: "123", name: "lewis", email: "lewis@myapp.com"}] });
+    return res.json({ "courses" : [{_id: "123", name: "end-to-end", author: "lewis prescott"}] });
 })
 
 module.exports = router;
