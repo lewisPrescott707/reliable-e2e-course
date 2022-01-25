@@ -32,7 +32,13 @@ export default class CreateCourse extends Component {
             author: this.state.author
         };
 
-        axios.post('http://localhost:4000/courses/create', courseObject)
+        axios.post(`${process.env.REACT_APP_API_URL}/courses/create`, {
+            headers: {
+                Authorization: `Bearer ${process.env.REACT_APP_API_TOKEN}`,
+                Accept: 'application/json'
+            },
+            data: courseObject
+        })
             .then((res) => {
                 console.log(res.data)
             }).catch((error) => {

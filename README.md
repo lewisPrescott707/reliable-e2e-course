@@ -4,4 +4,5 @@ Training resource to be used alongside "Reliable End to End testing using Contra
 
 ## Run Tests
 
-```npm test```
+1. ```export NODE_OPTIONS=--openssl-legacy-provider```
+1. ```npm test```

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import axios from 'axios';
+import { getMyCourses } from '../api/course.api';
 
 export default class Courses extends Component {
 
@@ -9,13 +9,13 @@ export default class Courses extends Component {
     }
 
     componentDidMount() {
-        axios.get('http://localhost:4000/courses')
-            .then(res => {
-                this.setState({ coursesCollection: res.data.courses });
-            })
-            .catch(function (error) {
-                console.log(error);
-            })
+        getMyCourses({ url: process.env.REACT_APP_API_URL, port: 4000, token: process.env.REACT_APP_API_TOKEN })
+        .then(res => {
+            this.setState({ coursesCollection: res.data.courses });
+        })
+        .catch(function (error) {
+            console.log(error);
+        })
     }
 
     render() {
@@ -34,13 +34,13 @@ export default class Courses extends Component {
                             {this.state.coursesCollection.map((data, i) => {
                                 return (
                                 <tr key={i}>
-                                    <td>
+                                    <td data-cy="id">
                                         {data._id}
                                     </td>
-                                    <td>
+                                    <td data-cy="name">
                                         {data.name}
                                     </td>
-                                    <td>
+                                    <td data-cy="author">
                                         {data.author}
                                     </td>
                                 </tr>
