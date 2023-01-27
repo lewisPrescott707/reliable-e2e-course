@@ -128,4 +128,4 @@ yarn-debug.log*
 yarn-error.log*
 
 /logs
-/pacts
+app/pact
