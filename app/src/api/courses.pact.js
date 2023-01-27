@@ -32,7 +32,7 @@ pactWith(
                         path: "/courses",
                         headers: {
                             "Accept": "application/json",
-                            "Authorization": "Bearer 123"
+                            "Authorization": string("Bearer 123")
                         },
                     },
                     willRespondWith: {

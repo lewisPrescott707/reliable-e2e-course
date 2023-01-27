@@ -18,7 +18,8 @@ This project is the supporting code for course [End to End Tests in Microservice
 ## Test
 
 ### Unit & Contract
-1. `npm run react:test`   
+1. `npm run react:test`
+1. `npm run contract:test`
 Note: contracts generated to `app/pact/pacts` folder
 
 ### End to End - Cypress

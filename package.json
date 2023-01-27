@@ -7,7 +7,8 @@
     "start": "cd app && react-scripts start",
     "build": "cd app && react-scripts build",
     "react:test": "cd app && CI=true react-scripts test",
-    "start-server": "cd server && nodemon server",
+    "contract:test": "cd app && npm run contracts",
+    "start:server": "cd server && nodemon server",
     "test": "start-server-and-test start http://localhost:3000 cy:run",
     "cy:open": "cypress open",
     "cy:run": "cypress run"

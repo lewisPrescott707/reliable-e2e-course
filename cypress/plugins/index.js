@@ -7,10 +7,11 @@ const axios = require('axios')
 module.exports = (on, config) => {
   on('task', {
     getStub(url) {
-      const result = axios.get(`https://ministryoftesting.pactflow.io/pacts/provider/Course_API/consumer/Student/version/0.0.1/stub${url}`,
+      
+      const result = axios.get(`https://ministryoftesting.pactflow.io/pacts/provider/Course_API/consumer/Student/version/0.0.2/stub${url}`,
         {
           headers: {
-            Authorization: 'Bearer mz0TQ06P5mEnUZfLO4BgSQ',
+            Authorization: 'Bearer 123',
             Accept: 'application/json'
           }
         }).then(response => { 
