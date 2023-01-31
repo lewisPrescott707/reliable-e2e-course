@@ -8,10 +8,10 @@ module.exports = (on, config) => {
   on('task', {
     getStub(url) {
       
-      const result = axios.get(`https://ministryoftesting.pactflow.io/pacts/provider/Course_API/consumer/Student/version/0.0.2/stub${url}`,
+      const result = axios.get(`https://<PACTFLOW_BASEURL>.pactflow.io/pacts/provider/Course_API/consumer/Student/version/0.0.2/stub${url}`,
         {
           headers: {
-            Authorization: 'Bearer 123',
+            Authorization: 'Bearer <PACTFLOW_API_TOKEN>',
             Accept: 'application/json'
           }
         }).then(response => { 
