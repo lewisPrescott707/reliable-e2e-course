@@ -1,12 +1,7 @@
 describe('Learning platform', () => {
     const url = '/courses'
     before(() => {
-        cy.task('getStub', url).then((data) => {
-            // API Local Server not running
-            cy.intercept(`http://localhost:4000${url}`, (req) => {
-                req.reply(data)
-            }).as('courses')
-        })
+        // Add cy.task & cy.intercept here
     })
 
     it('List courses', () => {
